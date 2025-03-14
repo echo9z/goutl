@@ -12,7 +12,7 @@ import "testing"
 // TestMd5 测试文件和字符串的 MD5 哈希函数。
 func TestMd5(t *testing.T) {
 	// 预期的文件 "md5.go" 的 MD5 哈希值。
-	const expectFileMd5 = "3709d29673e226fbaa85c28a6ead0a73"
+	const expectFileMd5 = "c6625e1e78e5c14e2eefd2204991e724"
 	// 计算文件 "md5.go" 的实际 MD5 哈希值。
 	actualFileMd5, err := FileMd5("./md5.go")
 	if err != nil {
@@ -33,7 +33,7 @@ func TestMd5(t *testing.T) {
 	actualStringMd5 := StringMd5(str)
 	// 比较字符串的预期和实际 MD5 哈希值。
 	if expectStringMd5 != actualStringMd5 {
-		t.Errorf("expect string md5 value is %s; but had %s\n", expectStringMd5, actualStringMd5)
+		t.Errorf("expect str md5 value is %s; but had %s\n", expectStringMd5, actualStringMd5)
 	}
 }
 

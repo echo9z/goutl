@@ -24,7 +24,7 @@ func FileMd5(filename string) (string, error) {
 	return hex.EncodeToString(h.Sum(nil)), nil // 返回文件的 MD5 哈希值（以十六进制字符串表示）
 }
 
-// get string md5
+// get str md5
 func StringMd5(s string) string {
 	md5 := md5.New()                        // 创建一个新的 MD5 哈希对象
 	md5.Write([]byte(s))                    // 将字符串转换为字节切片并写入哈希对象
